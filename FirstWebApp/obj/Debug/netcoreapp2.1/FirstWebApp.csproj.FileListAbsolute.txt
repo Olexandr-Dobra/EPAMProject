@@ -37,3 +37,14 @@ C:\nastia\epam\FirstWebSolution\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\
 C:\nastia\epam\FirstWebSolution\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Students\Details.g.cshtml.cs
 C:\nastia\epam\FirstWebSolution\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Students\Edit.g.cshtml.cs
 C:\nastia\epam\FirstWebSolution\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Students\Index.g.cshtml.cs
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.deps.json
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.runtimeconfig.json
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.runtimeconfig.dev.json
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.dll
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.pdb
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.csprojAssemblyReference.cache
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.csproj.CoreCompileInputs.cache
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.AssemblyInfoInputs.cache
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.AssemblyInfo.cs
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.dll
+C:\Users\sasha\Documents\Visual Studio 2017\Projects\EPAMProject\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.pdb
