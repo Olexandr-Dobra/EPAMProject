@@ -17,5 +17,7 @@ namespace FirstWebApp.Models
         public DbSet<FirstWebApp.Models.Student> Student { get; set; }
 
         public DbSet<FirstWebApp.Models.Teacher> Teacher { get; set; }
+
+        public DbSet<FirstWebApp.Models.Subjects> Subjects { get; set; }
     }
 }

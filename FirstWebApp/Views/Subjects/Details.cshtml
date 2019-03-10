@@ -1,0 +1,48 @@
+﻿@model FirstWebApp.Models.Subjects
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Subjects</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SurnameOfTeacher)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SurnameOfTeacher)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfTeacher)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NameOfTeacher)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Audithory)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Audithory)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mark)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mark)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
