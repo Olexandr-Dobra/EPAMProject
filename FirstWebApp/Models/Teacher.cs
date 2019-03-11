@@ -13,11 +13,11 @@ namespace FirstWebApp.Models
         public string Surname { get; set; }
 
         public int Age { get; set; }
-        TeacherPosition curentTecherPosition;
-
+        public TeacherPosition teacherPosition { get; set; }
+        
 
     }
-    enum TeacherPosition
+    public enum TeacherPosition
     {
         Professor , AssociateProfessor , SeniorLecturer,  Teacher , Assistant
     }
