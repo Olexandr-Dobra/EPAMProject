@@ -17,7 +17,7 @@ namespace FirstWebApp.Models
 
 
     }
-    enum TeacherPosition
+    public enum TeacherPosition
     {
         Professor , AssociateProfessor , SeniorLecturer,  Teacher , Assistant
     }
