@@ -53,7 +53,7 @@ namespace FirstWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,SurnameOfTeacher,Name,NameOfTeacher,Audithory,Mark")] Subjects subjects)
+        public async Task<IActionResult> Create([Bind("Id,Title,TeacherId,Audithory,Mark")] Subjects subjects)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace FirstWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,SurnameOfTeacher,Name,NameOfTeacher,Audithory,Mark")] Subjects subjects)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,TeacherId,Audithory,Mark")] Subjects subjects)
         {
             if (id != subjects.Id)
             {
@@ -148,5 +148,17 @@ namespace FirstWebApp.Controllers
         {
             return _context.Subjects.Any(e => e.Id == id);
         }
+
+        public ActionResult SubjectQuery(  int userChioseId) {
+
+
+            IEnumerable<Subjects> SubjectsDb = _context.Subjects;
+            ViewBag.Subjects = SubjectsDb;
+            ViewBag.userChioseId = userChioseId;
+            return View();
+
+        }
+
+
     }
 }

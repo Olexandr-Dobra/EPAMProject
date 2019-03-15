@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FirstWebApp.Models.Subjects>
+
+@{
+    ViewData["Title"] = "SubjectQuery";
+}
+
+<h2>розклад</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <p>nazva predmetu</p>
+            </th>
+            <th>
+                <p>auditoiya</p>
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.Subjects)
+        {
+
+
+            if (item.TeacherId == ViewBag.userChioseId)
+            {
+
+
+
+                <tr>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td>
+                        @item.Audithory
+                    </td>
+                </tr>
+
+            }
+        }
+    </tbody>
+</table>

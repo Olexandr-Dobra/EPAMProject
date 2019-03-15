@@ -5,25 +5,26 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using FirstWebApp.Models;
 
-namespace FirstWebApp.Models
+namespace FirstWebApp.Controllers
 {
-    public class StudentsController : Controller
+    public class GroupsController : Controller
     {
         private readonly FirstWebAppContext _context;
 
-        public StudentsController(FirstWebAppContext context)
+        public GroupsController(FirstWebAppContext context)
         {
             _context = context;
         }
 
-        // GET: Students
+        // GET: Groups
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Student.ToListAsync());
+            return View(await _context.Group.ToListAsync());
         }
 
-        // GET: Students/Details/5
+        // GET: Groups/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -31,39 +32,39 @@ namespace FirstWebApp.Models
                 return NotFound();
             }
 
-            var student = await _context.Student
+            var @group = await _context.Group
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (student == null)
+            if (@group == null)
             {
                 return NotFound();
             }
 
-            return View(student);
+            return View(@group);
         }
 
-        // GET: Students/Create
+        // GET: Groups/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Students/Create
+        // POST: Groups/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Age")] Student student)
+        public async Task<IActionResult> Create([Bind("Id,TeacherId")] Group @group)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(student);
+                _context.Add(@group);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(student);
+            return View(@group);
         }
 
-        // GET: Students/Edit/5
+        // GET: Groups/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -71,22 +72,22 @@ namespace FirstWebApp.Models
                 return NotFound();
             }
 
-            var student = await _context.Student.FindAsync(id);
-            if (student == null)
+            var @group = await _context.Group.FindAsync(id);
+            if (@group == null)
             {
                 return NotFound();
             }
-            return View(student);
+            return View(@group);
         }
 
-        // POST: Students/Edit/5
+        // POST: Groups/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Age")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TeacherId")] Group @group)
         {
-            if (id != student.Id)
+            if (id != @group.Id)
             {
                 return NotFound();
             }
@@ -95,12 +96,12 @@ namespace FirstWebApp.Models
             {
                 try
                 {
-                    _context.Update(student);
+                    _context.Update(@group);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!StudentExists(student.Id))
+                    if (!GroupExists(@group.Id))
                     {
                         return NotFound();
                     }
@@ -111,10 +112,10 @@ namespace FirstWebApp.Models
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(student);
+            return View(@group);
         }
 
-        // GET: Students/Delete/5
+        // GET: Groups/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -122,30 +123,30 @@ namespace FirstWebApp.Models
                 return NotFound();
             }
 
-            var student = await _context.Student
+            var @group = await _context.Group
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (student == null)
+            if (@group == null)
             {
                 return NotFound();
             }
 
-            return View(student);
+            return View(@group);
         }
 
-        // POST: Students/Delete/5
+        // POST: Groups/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var student = await _context.Student.FindAsync(id);
-            _context.Student.Remove(student);
+            var @group = await _context.Group.FindAsync(id);
+            _context.Group.Remove(@group);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool StudentExists(int id)
+        private bool GroupExists(int id)
         {
-            return _context.Student.Any(e => e.Id == id);
+            return _context.Group.Any(e => e.Id == id);
         }
     }
 }

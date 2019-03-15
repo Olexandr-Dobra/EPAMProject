@@ -9,12 +9,10 @@ namespace FirstWebApp.Models
     public class Student
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-
-        [DataType(DataType.Date)]
-        public DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Age { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public int GroupId { get; set; }
+        public string Password { get; set; }
     }
 }
 

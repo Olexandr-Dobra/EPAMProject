@@ -12329,11 +12329,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Oleg\\Source\\Repos\\EPAMProject\\FirstWebApp\\FirstWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Oleg\\Source\\Repos\\EPAMProject2\\FirstWebApp\\FirstWebApp.csproj",
       "projectName": "FirstWebApp",
-      "projectPath": "C:\\Users\\Oleg\\Source\\Repos\\EPAMProject\\FirstWebApp\\FirstWebApp.csproj",
+      "projectPath": "C:\\Users\\Oleg\\Source\\Repos\\EPAMProject2\\FirstWebApp\\FirstWebApp.csproj",
       "packagesPath": "C:\\Users\\Oleg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Oleg\\Source\\Repos\\EPAMProject\\FirstWebApp\\obj\\",
+      "outputPath": "C:\\Users\\Oleg\\Source\\Repos\\EPAMProject2\\FirstWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
