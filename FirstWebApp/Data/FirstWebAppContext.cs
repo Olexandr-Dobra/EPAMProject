@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using FirstWebApp.Models;
-using FirstWebApp.Models.ViewModel;
+using FirstWebApp.Models.ViewModels;
 
 namespace FirstWebApp.Models
 {
@@ -23,6 +23,6 @@ namespace FirstWebApp.Models
 
         public DbSet<FirstWebApp.Models.Group> Group { get; set; }
 
-        public DbSet<FirstWebApp.Models.ViewModel.User> User { get; set; }
+        public DbSet<FirstWebApp.Models.User> Users { get; set; }
     }
 }

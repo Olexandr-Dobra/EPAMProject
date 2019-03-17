@@ -3,14 +3,16 @@ using FirstWebApp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FirstWebApp.Migrations
 {
     [DbContext(typeof(FirstWebAppContext))]
-    partial class FirstWebAppContextModelSnapshot : ModelSnapshot
+    [Migration("20190316085156_MigrationForAnotherComp")]
+    partial class MigrationForAnotherComp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,6 +41,9 @@ namespace FirstWebApp.Migrations
 
                     b.Property<int>("Age");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
                     b.Property<int>("GroupId");
 
                     b.Property<string>("Name");
@@ -48,6 +53,8 @@ namespace FirstWebApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Student");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Student");
                 });
 
             modelBuilder.Entity("FirstWebApp.Models.Subjects", b =>
@@ -86,19 +93,21 @@ namespace FirstWebApp.Migrations
                     b.ToTable("Teacher");
                 });
 
-            modelBuilder.Entity("FirstWebApp.Models.User", b =>
+            modelBuilder.Entity("FirstWebApp.Models.ViewModel.User", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.HasBaseType("FirstWebApp.Models.Student");
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .IsRequired();
 
-                    b.Property<string>("Password");
+                    b.Property<string>("PasswordConfirm")
+                        .IsRequired();
 
-                    b.HasKey("Id");
+                    b.Property<int>("Year");
 
-                    b.ToTable("Users");
+                    b.ToTable("User");
+
+                    b.HasDiscriminator().HasValue("User");
                 });
 #pragma warning restore 612, 618
         }

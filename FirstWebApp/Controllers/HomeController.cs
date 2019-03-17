@@ -5,16 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FirstWebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FirstWebApp.Controllers
 {
     public class HomeController : Controller
     {
+
+        [Authorize]
         public IActionResult Index()
         {
-            return View();
+            return Content(User.Identity.Name);
         }
-
+        [Authorize]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
