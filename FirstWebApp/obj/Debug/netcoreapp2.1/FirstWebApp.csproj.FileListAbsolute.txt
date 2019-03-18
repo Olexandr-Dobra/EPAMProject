@@ -103,4 +103,5 @@ C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razo
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Edit.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Index.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Subjects\SubjectQuery.g.cshtml.cs
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Account\Index.g.cshtml.cs
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs

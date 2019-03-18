@@ -15,7 +15,7 @@ namespace FirstWebApp.Controllers
         [Authorize]
         public IActionResult Index()
         {
-            return Content(User.Identity.Name);
+            return View();
         }
         [Authorize]
         public IActionResult About()
