@@ -3,14 +3,16 @@ using FirstWebApp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FirstWebApp.Migrations
 {
     [DbContext(typeof(FirstWebAppContext))]
-    partial class FirstWebAppContextModelSnapshot : ModelSnapshot
+    [Migration("20190318170146_addMarkForTeacher")]
+    partial class addMarkForTeacher
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,23 +31,6 @@ namespace FirstWebApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Group");
-                });
-
-            modelBuilder.Entity("FirstWebApp.Models.MarkOfTeacher", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Mark");
-
-                    b.Property<int>("TeacherId");
-
-                    b.Property<string>("TeacherName");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("MarkOfTeacher");
                 });
 
             modelBuilder.Entity("FirstWebApp.Models.Student", b =>
@@ -95,6 +80,8 @@ namespace FirstWebApp.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("Age");
+
+                    b.Property<int>("Mark");
 
                     b.Property<string>("Name");
 

@@ -1,16 +1,29 @@
-﻿@{
+﻿@model IEnumerable<FirstWebApp.Models.Subjects>
+
+
+@{
     ViewData["Title"] = "Розклад";
 }
 
-<h1>Bведіть назву групи</h1>
-<div class="row">
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Пошук</button>
-            </span>
 
-        </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="form-group">
+    <form asp-controller="Subjects" asp-action="SubjectQuery" method="get">
+        <h1>Bведіть назву групи</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for..." value="@ViewBag.userChoiseId" name="userChoiseId">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Пошук</button>
+                    </span>
+
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </form>
+
+</div>

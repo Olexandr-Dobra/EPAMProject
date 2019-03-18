@@ -4,12 +4,15 @@
     ViewData["Title"] = "SubjectQuery";
 }
 
-<h2>розклад</h2>
+<h2>Pозклад</h2>
 
 
 <table class="table">
     <thead>
         <tr>
+            <th>
+                <p>dni tyzhnya</p>
+            </th>
             <th>
                 <p>nazva predmetu</p>
             </th>
@@ -21,15 +24,17 @@
         </tr>
     </thead>
     <tbody>
+       
         @foreach (var item in ViewBag.Subjects)
         {
+            int i = 3;
+            if (true)
+            {
 
+            }
 
             if (item.TeacherId == ViewBag.userChoiseId)
             {
-
-
-
                 <tr>
                     <td>
                         @item.Title

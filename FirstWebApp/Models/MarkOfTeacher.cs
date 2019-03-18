@@ -5,17 +5,12 @@ using System.Threading.Tasks;
 
 namespace FirstWebApp.Models
 {
-    public class Subjects
+    public class MarkOfTeacher
     {
         public int Id { get; set; }
-
-        
-        public string Title { get; set; }
-        public int TeacherId { get; set; }
-        public string DayOfWeek { get; set; }
-
-        public string Audithory { get; set; }
         public int Mark { get; set; }
+        public int TeacherId { get; set; }
+        public string TeacherName { get; set; }
 
     }
 }

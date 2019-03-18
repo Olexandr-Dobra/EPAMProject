@@ -11,11 +11,14 @@ namespace FirstWebApp.Controllers
 {
     public class HomeController : Controller
     {
+     
 
-        [Authorize]
         public IActionResult Index()
         {
+
             return View();
+            
+
         }
         [Authorize]
         public IActionResult About()

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<FirstWebApp.Models.MarkOfTeacher>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Оцінка
+            </th>
+            <th>
+                Викладач
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+       
+
+        @foreach (var item in Model)
+        {
+            
+
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mark)
+                </td>
+                <td>
+                    @await Component.InvokeAsync("BestPhone")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeacherName)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

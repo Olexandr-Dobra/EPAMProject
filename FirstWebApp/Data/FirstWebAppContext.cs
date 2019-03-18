@@ -24,5 +24,7 @@ namespace FirstWebApp.Models
         public DbSet<FirstWebApp.Models.Group> Group { get; set; }
 
         public DbSet<FirstWebApp.Models.User> Users { get; set; }
+
+        public DbSet<FirstWebApp.Models.MarkOfTeacher> MarkOfTeacher { get; set; }
     }
 }

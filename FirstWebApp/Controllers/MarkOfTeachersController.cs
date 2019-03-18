@@ -9,23 +9,23 @@ using FirstWebApp.Models;
 
 namespace FirstWebApp.Controllers
 {
-    public class SubjectsController : Controller
+    public class MarkOfTeachersController : Controller
     {
         private readonly FirstWebAppContext _context;
 
-        public SubjectsController(FirstWebAppContext context)
+        public MarkOfTeachersController(FirstWebAppContext context)
         {
             _context = context;
         }
 
-        // GET: Subjects
+        // GET: MarkOfTeachers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Subjects.ToListAsync());
+            return View(await _context.MarkOfTeacher.ToListAsync());
             
         }
 
-        // GET: Subjects/Details/5
+        // GET: MarkOfTeachers/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace FirstWebApp.Controllers
                 return NotFound();
             }
 
-            var subjects = await _context.Subjects
+            var markOfTeacher = await _context.MarkOfTeacher
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (subjects == null)
+            if (markOfTeacher == null)
             {
                 return NotFound();
             }
 
-            return View(subjects);
+            return View(markOfTeacher);
         }
 
-        // GET: Subjects/Create
+        // GET: MarkOfTeachers/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Subjects/Create
+        // POST: MarkOfTeachers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,TeacherId,Audithory,Mark")] Subjects subjects)
+        public async Task<IActionResult> Create([Bind("Id,Mark,TeacherId,TeacherName")] MarkOfTeacher markOfTeacher)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(subjects);
+                _context.Add(markOfTeacher);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(subjects);
+            return View(markOfTeacher);
         }
 
-        // GET: Subjects/Edit/5
+        // GET: MarkOfTeachers/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace FirstWebApp.Controllers
                 return NotFound();
             }
 
-            var subjects = await _context.Subjects.FindAsync(id);
-            if (subjects == null)
+            var markOfTeacher = await _context.MarkOfTeacher.FindAsync(id);
+            if (markOfTeacher == null)
             {
                 return NotFound();
             }
-            return View(subjects);
+            return View(markOfTeacher);
         }
 
-        // POST: Subjects/Edit/5
+        // POST: MarkOfTeachers/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,TeacherId,Audithory,Mark")] Subjects subjects)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Mark,TeacherId,TeacherName")] MarkOfTeacher markOfTeacher)
         {
-            if (id != subjects.Id)
+            if (id != markOfTeacher.Id)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace FirstWebApp.Controllers
             {
                 try
                 {
-                    _context.Update(subjects);
+                    _context.Update(markOfTeacher);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SubjectsExists(subjects.Id))
+                    if (!MarkOfTeacherExists(markOfTeacher.Id))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace FirstWebApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(subjects);
+            return View(markOfTeacher);
         }
 
-        // GET: Subjects/Delete/5
+        // GET: MarkOfTeachers/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,42 +124,39 @@ namespace FirstWebApp.Controllers
                 return NotFound();
             }
 
-            var subjects = await _context.Subjects
+            var markOfTeacher = await _context.MarkOfTeacher
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (subjects == null)
+            if (markOfTeacher == null)
             {
                 return NotFound();
             }
 
-            return View(subjects);
+            return View(markOfTeacher);
         }
 
-        // POST: Subjects/Delete/5
+        // POST: MarkOfTeachers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var subjects = await _context.Subjects.FindAsync(id);
-            _context.Subjects.Remove(subjects);
+            var markOfTeacher = await _context.MarkOfTeacher.FindAsync(id);
+            _context.MarkOfTeacher.Remove(markOfTeacher);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool SubjectsExists(int id)
+        private bool MarkOfTeacherExists(int id)
         {
-            return _context.Subjects.Any(e => e.Id == id);
-        }
-        [HttpGet]
-        public ActionResult SubjectQuery( int userChoiseId) {
-
-
-            IEnumerable<Subjects> SubjectsDb = _context.Subjects;
-            ViewBag.Subjects = SubjectsDb;
-            ViewBag.userChoiseId = userChoiseId;
-            return View();
-
+            return _context.MarkOfTeacher.Any(e => e.Id == id);
         }
 
 
+        public double AverageMarkOfTeacher(int TeacherId) {
+            var x = _context.MarkOfTeacher.Average(b => b.Mark);
+
+
+
+            return x;
+        }
     }
 }

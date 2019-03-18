@@ -11,7 +11,7 @@ namespace FirstWebApp.Models
 
         public string Name { get; set; }
         public string Surname { get; set; }
-
+      
         public int Age { get; set; }
         TeacherPosition curentTecherPosition;
 
