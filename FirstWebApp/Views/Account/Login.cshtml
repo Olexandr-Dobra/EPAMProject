@@ -1,11 +1,10 @@
 ﻿@model FirstWebApp.Models.ViewModels.LoginModel
-@{
-    ViewData["Title"] = "Login";
-}
+
 
 <head>
     <link rel="stylesheet" href="~/css/login.css" />
 </head>
+<body>
 <div class="container">
 
     <h1>Вхід на сайт</h1>
@@ -16,7 +15,7 @@
         <div class="validation" asp-validation-summary="ModelOnly" />
         <hr>
 
-        <label asp-for="Email">Введіть Email</label>
+        <label asp-for="Email">Введіть cтудентський квиток</label>
         <input type="text" asp-for="Email" />
         <span asp-validation-for="Email" />
 
@@ -29,7 +28,7 @@
         <button type="submit" class="registerbtn">Увійти</button>
     </form>
 </div>
-
+    </body>
 
 
 

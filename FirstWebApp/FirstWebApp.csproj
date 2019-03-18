@@ -10,4 +10,16 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Students\Evaluate.css" />
+    <None Remove="Views\Students\Evaluate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\banner2.jpg" />
+    <Content Remove="wwwroot\images\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\images\banner2.jpg" />
+    <None Include="wwwroot\images\background.jpg" />
+  </ItemGroup>
 </Project>
