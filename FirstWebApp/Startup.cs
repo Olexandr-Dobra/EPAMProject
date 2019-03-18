@@ -27,6 +27,10 @@ namespace FirstWebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<FirstWebAppContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("FirstWebAppContext")));
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -42,8 +46,7 @@ namespace FirstWebApp
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<FirstWebAppContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("FirstWebAppContext")));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +64,8 @@ namespace FirstWebApp
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseAuthentication();
+
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>

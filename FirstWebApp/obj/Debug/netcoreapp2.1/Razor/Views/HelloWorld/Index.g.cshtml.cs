@@ -67,7 +67,7 @@ using FirstWebApp.Models;
             WriteLiteral("\r\n\r\n\r\n\r\n<div class=\"form-group\">\r\n    ");
             EndContext();
             BeginContext(136, 612, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b89bea9c593e465abdc4c49271539dcd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5d9ad7b78964077ae2ed77d3b2c00af", async() => {
                 BeginContext(168, 184, true);
                 WriteLiteral("\r\n        <h1>Bведіть назву групи</h1>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6\">\r\n                <div class=\"input-group\">\r\n                    <input type=\"text\"");
                 EndContext();

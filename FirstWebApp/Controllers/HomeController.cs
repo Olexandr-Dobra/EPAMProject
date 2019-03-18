@@ -11,13 +11,13 @@ namespace FirstWebApp.Controllers
 {
     public class HomeController : Controller
     {
-     
 
+       
         public IActionResult Index()
         {
-            return View(); 
+            return View();
         }
-        [Authorize]
+       
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

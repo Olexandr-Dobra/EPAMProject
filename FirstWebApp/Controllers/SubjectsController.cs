@@ -148,13 +148,13 @@ namespace FirstWebApp.Controllers
         {
             return _context.Subjects.Any(e => e.Id == id);
         }
-
-        public ActionResult SubjectQuery(  int userChioseId) {
+        [HttpGet]
+        public ActionResult SubjectQuery( int userChoiseId) {
 
 
             IEnumerable<Subjects> SubjectsDb = _context.Subjects;
             ViewBag.Subjects = SubjectsDb;
-            ViewBag.userChioseId = userChioseId;
+            ViewBag.userChoiseId = userChoiseId;
             return View();
 
         }
