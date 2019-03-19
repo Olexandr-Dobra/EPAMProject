@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-               Оцінка
+                Оцінка
             </th>
             <th>
                 Викладач
@@ -23,17 +23,15 @@
     </thead>
     <tbody>
 
-       
+
 
         @foreach (var item in Model)
         {
-            
+
 
 
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Mark)
-                </td>
+                
                 <td>
                     @await Component.InvokeAsync("BestPhone")
                 </td>

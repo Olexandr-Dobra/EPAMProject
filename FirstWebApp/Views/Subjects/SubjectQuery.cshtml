@@ -11,20 +11,20 @@
     <thead>
         <tr>
             <th>
-                <p>dni tyzhnya</p>
+                <p>День Тижня</p>
             </th>
             <th>
-                <p>nazva predmetu</p>
+                <p>Назва предмету</p>
             </th>
             <th>
-                <p>auditoiya</p>
+                <p>Аудиторія</p>
             </th>
 
             <th></th>
         </tr>
     </thead>
     <tbody>
-       
+
         @foreach (var item in ViewBag.Subjects)
         {
             int i = 3;
@@ -33,9 +33,12 @@
 
             }
 
-            if (item.TeacherId == ViewBag.userChoiseId)
+            if (item.TeacherName == ViewBag.userChoiseName)
             {
                 <tr>
+                    <td>
+                        @item.DayOfWeek
+                    </td>
                     <td>
                         @item.Title
                     </td>

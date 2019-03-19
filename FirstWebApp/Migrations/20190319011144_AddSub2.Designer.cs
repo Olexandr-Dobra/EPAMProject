@@ -9,14 +9,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstWebApp.Migrations
 {
     [DbContext(typeof(FirstWebAppContext))]
-    [Migration("20190318171755_addMarkOfTeacher")]
-    partial class addMarkOfTeacher
+    [Migration("20190319011144_AddSub2")]
+    partial class AddSub2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -31,6 +31,23 @@ namespace FirstWebApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Group");
+                });
+
+            modelBuilder.Entity("FirstWebApp.Models.MarkOfTeacher", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Mark");
+
+                    b.Property<int>("TeacherId");
+
+                    b.Property<string>("TeacherName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MarkOfTeacher");
                 });
 
             modelBuilder.Entity("FirstWebApp.Models.Student", b =>
@@ -65,6 +82,8 @@ namespace FirstWebApp.Migrations
                     b.Property<int>("Mark");
 
                     b.Property<int>("TeacherId");
+
+                    b.Property<string>("TeacherName");
 
                     b.Property<string>("Title");
 

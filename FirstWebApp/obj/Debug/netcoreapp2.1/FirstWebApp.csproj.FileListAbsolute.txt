@@ -110,8 +110,6 @@ C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\bin\Debug\netcoreapp2.1\Firs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.runtimeconfig.dev.json
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.dll
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.pdb
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.Razor.dll
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.Razor.pdb
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.csproj.CoreCompileInputs.cache
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.AssemblyInfoInputs.cache
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.AssemblyInfo.cs
@@ -145,7 +143,6 @@ C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razo
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Subjects\Details.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Subjects\Edit.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Subjects\Index.g.cshtml.cs
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Subjects\SubjectQuery.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Teachers\Create.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Teachers\Delete.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Teachers\Details.g.cshtml.cs
@@ -155,7 +152,6 @@ C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razo
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.RazorTargetAssemblyInfo.cache
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.RazorTargetAssemblyInfo.cs
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.Razor.pdb
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.dll
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.pdb
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.csproj.CopyComplete
@@ -165,3 +161,9 @@ C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razo
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\MarkOfTeachers\Details.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\MarkOfTeachers\Edit.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\MarkOfTeachers\Index.g.cshtml.cs
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.Views.dll
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\bin\Debug\netcoreapp2.1\FirstWebApp.Views.pdb
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.RazorAssemblyInfo.cache
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.RazorAssemblyInfo.cs
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.Views.pdb
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Subjects\SubjectQuery.g.cshtml.cs

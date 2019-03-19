@@ -22,7 +22,7 @@ namespace FirstWebApp.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _context.Subjects.ToListAsync());
-            
+
         }
 
         // GET: Subjects/Details/5
@@ -54,7 +54,7 @@ namespace FirstWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,TeacherId,Audithory,Mark")] Subjects subjects)
+        public async Task<IActionResult> Create([Bind("Id,Title,TeacherId,DayOfWeek,Audithory,Mark")] Subjects subjects)
         {
             if (ModelState.IsValid)
             {
@@ -150,11 +150,13 @@ namespace FirstWebApp.Controllers
             return _context.Subjects.Any(e => e.Id == id);
         }
         [HttpGet]
-        public ActionResult SubjectQuery( int userChoiseId) {
+        public ActionResult SubjectQuery(int userChoiseId)
+        {
 
-
+           
             IEnumerable<Subjects> SubjectsDb = _context.Subjects;
             ViewBag.Subjects = SubjectsDb;
+
             ViewBag.userChoiseId = userChoiseId;
             return View();
 

@@ -12,6 +12,7 @@ namespace FirstWebApp.Models
         
         public string Title { get; set; }
         public int TeacherId { get; set; }
+        public string TeacherName { get; set; }
         public string DayOfWeek { get; set; }
 
         public string Audithory { get; set; }

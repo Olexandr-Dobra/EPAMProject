@@ -16,7 +16,9 @@ namespace FirstWebApp.Cimponents
         public string Invoke()
         {
 
+
             
+
 
 
             var x = _context.MarkOfTeacher.Average(b => b.Mark);

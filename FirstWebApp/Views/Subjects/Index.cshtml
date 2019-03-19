@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<FirstWebApp.Models.Subjects>
 
-
 @{
     ViewData["Title"] = "Index";
 }
@@ -10,60 +9,29 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<div class="form-group">
-    <form asp-action="SubjectQuery" method="get">
-        <p><strong>Как вас зовут?</strong></p>
-        <p><input type="text" value="@ViewBag.userChoiseId" name="userChoiseId"></p>
-    </form>
-        <div class="form-group">
-            <input type="submit" value="Create" class="btn btn-default" />
-        </div>
-    
-    
-</div>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                Назва предмету
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TeacherId)
+                Оцінка
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Audithory)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Mark)
-            </th>
-            <th></th>
+
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-    
-
-
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TeacherId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Audithory)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Mark)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
+           
         </tr>
-    
 }
     </tbody>
 </table>

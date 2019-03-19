@@ -21,6 +21,16 @@ namespace FirstWebApp.Controllers
         // GET: MarkOfTeachers
         public async Task<IActionResult> Index()
         {
+            var x = from i in _context.MarkOfTeacher
+                    group i by i.TeacherId into TeacheridCount
+                    select TeacheridCount.Count();
+
+            int z = 0;
+            foreach (var item in x)
+            {
+                z++;
+            }
+
             return View(await _context.MarkOfTeacher.ToListAsync());
             
         }
