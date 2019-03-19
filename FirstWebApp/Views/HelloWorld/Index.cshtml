@@ -8,15 +8,15 @@
 
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-controller="Groups" asp-action="Create">Create New</a>
 </p>
 <div class="form-group">
-    <form asp-controller="Subjects" asp-action="SubjectQuery" method="get">
+    <form asp-controller="Groups" asp-action="Index" method="get">
         <h1>Bведіть назву групи</h1>
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for..." value="@ViewBag.userChoiseName" name="userChoiseName">
+                    <input type="text" class="form-control" placeholder="Search for..." value="@ViewBag.userGroupName" name="userGroupName">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button">Пошук</button>
                     </span>

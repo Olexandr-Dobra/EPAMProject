@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using FirstWebApp.Models;
 
-namespace FirstWebApp.Controllers
+namespace FirstWebApp.Models
 {
     public class GroupsController : Controller
     {
@@ -19,8 +18,16 @@ namespace FirstWebApp.Controllers
         }
 
         // GET: Groups
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string userGroupName)
         {
+            
+
+                IEnumerable<Subjects> SubjectsDb = _context.Subjects;
+                ViewBag.Subjects = SubjectsDb;
+
+                ViewBag.userGroupName = userGroupName;
+               
+            
             return View(await _context.Group.ToListAsync());
         }
 
@@ -53,7 +60,7 @@ namespace FirstWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TeacherId")] Group @group)
+        public async Task<IActionResult> Create([Bind("Id,TeacherId,GroupName,TeacherName,Audithory,Title")] Group @group)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +92,7 @@ namespace FirstWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TeacherId")] Group @group)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TeacherId,GroupName,TeacherName,Audithory,Title")] Group @group)
         {
             if (id != @group.Id)
             {

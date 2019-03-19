@@ -118,11 +118,6 @@ C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Firs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.RazorCoreGenerate.cache
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Create.g.cshtml.cs
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Delete.g.cshtml.cs
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Details.g.cshtml.cs
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Edit.g.cshtml.cs
-C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Index.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\HelloWorld\Index.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\HelloWorld\Welcome.g.cshtml.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
@@ -167,3 +162,8 @@ C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Firs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.RazorAssemblyInfo.cs
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\FirstWebApp.Views.pdb
 C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Subjects\SubjectQuery.g.cshtml.cs
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Create.g.cshtml.cs
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Delete.g.cshtml.cs
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Details.g.cshtml.cs
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Edit.g.cshtml.cs
+C:\Users\Oleg\Source\Repos\EPAMProject2\FirstWebApp\obj\Debug\netcoreapp2.1\Razor\Views\Groups\Index.g.cshtml.cs

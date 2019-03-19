@@ -9,6 +9,10 @@ namespace FirstWebApp.Models
     {
         public int Id { get; set; }
         public int TeacherId { get; set; }
+        public string GroupName { get; set; }
+        public string TeacherName { get; set; }
+        public string Audithory { get; set; }
+        public string Title { get; set; }
 
     }
 }

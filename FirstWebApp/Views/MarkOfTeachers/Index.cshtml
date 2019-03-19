@@ -28,18 +28,23 @@
         @foreach (var item in Model)
         {
 
+            @for (int i = 0; i < @ViewBag.TeacherCount; i++)
+            {
 
 
-            <tr>
-                
-                <td>
-                    @await Component.InvokeAsync("BestPhone")
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TeacherName)
-                </td>
 
-            </tr>
+                <tr>
+
+                    <td>
+                        @await Component.InvokeAsync("BestPhone")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TeacherName)
+                    </td>
+
+                </tr>
+            }
+            break;
         }
     </tbody>
 </table>

@@ -30,6 +30,7 @@ namespace FirstWebApp.Controllers
             {
                 z++;
             }
+            ViewBag.TeacherCount = z;
 
             return View(await _context.MarkOfTeacher.ToListAsync());
             
@@ -161,12 +162,16 @@ namespace FirstWebApp.Controllers
         }
 
 
-        public double AverageMarkOfTeacher(int TeacherId) {
-            var x = _context.MarkOfTeacher.Average(b => b.Mark);
+        public ActionResult SubjectQuery(int userChoiseId)
+        {
 
 
+            IEnumerable<Teacher> SubjectsDb = _context.Teacher ;
+            ViewBag.Subjects = SubjectsDb;
 
-            return x;
+            ViewBag.userChoiseId = userChoiseId;
+            return View();
+
         }
     }
 }
