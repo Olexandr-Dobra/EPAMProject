@@ -4,7 +4,10 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Оцінка Викладача</h2>
+
+
+  <h1>  Оцінити викладача</h1>
+
 
 <hr />
 <div class="row">
@@ -12,24 +15,24 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Mark" class="control-label"></label>
+                <label asp-for="Mark" class="control-label">Оцінка</label>
                 <input asp-for="Mark" class="form-control" />
                 <span asp-validation-for="Mark" class="text-danger"></span>
             </div>
            
             <div class="form-group">
-                <label asp-for="TeacherName" class="control-label"></label>
+                <label asp-for="TeacherName" class="control-label">Ім'я викладача</label>
                 <input asp-for="TeacherName" class="form-control" />
                 <span asp-validation-for="TeacherName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Оцінити" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Повернутись назад</a>
 </div>
 

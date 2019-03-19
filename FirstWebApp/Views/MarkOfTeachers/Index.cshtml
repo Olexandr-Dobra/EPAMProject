@@ -4,12 +4,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
-
+<h1>   </h1>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Оцінити викладача</a>
 </p>
-<table class="table">
+
+
+
+<tableclass="table">
     <thead>
         <tr>
             <th>
@@ -28,18 +30,23 @@
         @foreach (var item in Model)
         {
 
+            @for (int i = 0; i < @ViewBag.TeacherCount; i++)
+            {
 
 
-            <tr>
-                
-                <td>
-                    @await Component.InvokeAsync("BestPhone")
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TeacherName)
-                </td>
 
-            </tr>
+                <tr>
+
+                    <td>
+                        @await Component.InvokeAsync("BestPhone")
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TeacherName)
+                    </td>
+
+                </tr>
+            }
+            break;
         }
     </tbody>
 </table>

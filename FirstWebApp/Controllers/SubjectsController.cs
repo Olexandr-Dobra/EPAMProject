@@ -54,7 +54,7 @@ namespace FirstWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,TeacherId,DayOfWeek,Audithory,Mark")] Subjects subjects)
+        public async Task<IActionResult> Create([Bind("Id,Title,TeacherId, TeacherName, DayOfWeek,Audithory,Mark")] Subjects subjects)
         {
             if (ModelState.IsValid)
             {

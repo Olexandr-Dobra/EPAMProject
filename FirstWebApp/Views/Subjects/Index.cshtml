@@ -4,11 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
 
-<p>
+
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
+
+<h1>  </h1>
 <table class="table">
     <thead>
         <tr>
@@ -17,6 +19,9 @@
             </th>
             <th>
                 Оцінка
+            </th>
+            <th>
+                Вкладач
             </th>
 
         </tr>
@@ -30,7 +35,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Mark)
             </td>
-           
+            <td>
+                @Html.DisplayFor(modelItem => item.TeacherName)
+            </td>
+
         </tr>
 }
     </tbody>
