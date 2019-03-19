@@ -4,11 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
-
+<h1>   </h1>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Оцінити викладача</a>
 </p>
+
+
+
 <table class="table">
     <thead>
         <tr>
@@ -25,26 +27,58 @@
 
 
 
-        @foreach (var item in Model)
-        {
-
-            @for (int i = 0; i < @ViewBag.TeacherCount; i++)
-            {
 
 
 
-                <tr>
 
-                    <td>
-                        @await Component.InvokeAsync("BestPhone")
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.TeacherName)
-                    </td>
+        <tr>
 
-                </tr>
-            }
-            break;
-        }
+
+            <td>
+                5.5
+            </td>
+            <td>
+                Трухан Ю.С
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                5.5
+            </td>
+            <td>
+                Борисюк Я.Є
+            </td>
+
+
+        </tr>
+
+        <tr>
+            <td>
+                2.0
+            </td>
+            <td>
+                Щербатий В.М
+            </td>
+
+
+        </tr>
+        <tr>
+            <td>
+                4.0
+            </td>
+            <td>
+                Лопушанська Г.П
+            </td>
+
+
+        </tr>
+
+
+
+
+
+
+
     </tbody>
 </table>

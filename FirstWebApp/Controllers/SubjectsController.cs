@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FirstWebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FirstWebApp.Controllers
 {
@@ -18,6 +19,7 @@ namespace FirstWebApp.Controllers
             _context = context;
         }
 
+        [Authorize]
         // GET: Subjects
         public async Task<IActionResult> Index()
         {
@@ -52,6 +54,7 @@ namespace FirstWebApp.Controllers
         // POST: Subjects/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,TeacherId, TeacherName, DayOfWeek,Audithory,Mark")] Subjects subjects)
