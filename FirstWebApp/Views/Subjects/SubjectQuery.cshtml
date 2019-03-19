@@ -25,32 +25,28 @@
     </thead>
     <tbody>
 
-        @foreach (var item in ViewBag.Subjects)
+        @foreach (var item in @ViewBag.Subjects)
         {
-            int i = 3;
-            if (true)
-            {
 
+           
+
+
+                if (item.TeacherName == @ViewBag.userChoiseName)
+                {
+                    <tr>
+                        <td>
+                            @item.DayOfWeek
+                        </td>
+                        <td>
+                            @item.Title
+                        </td>
+                        <td>
+                            @item.Audithory
+                        </td>
+                    </tr>
+
+                }
+            
             }
-
-            if (item.TeacherName == ViewBag.userChoiseName)
-            {
-
-                <tr>
-                    
-                    <th rowspan=" 4">
-                        @item.DayOfWeek
-                    </th>
-                        
-                    <td>
-                        @item.Title
-                    </td>
-                    <td>
-                        @item.Audithory
-                    </td>
-                </tr>
-
-            }
-        }
-    </tbody>
-</table>
+        </tbody>
+    </table>
